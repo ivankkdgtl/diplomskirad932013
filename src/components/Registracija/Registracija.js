@@ -23,7 +23,7 @@ class Register extends React.Component {
   }
 
   prijavi = () => {
-    fetch('http://localhost:3001/registracija', {
+    fetch(this.props.urlServera+'/registracija', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({

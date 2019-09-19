@@ -6,25 +6,25 @@ class Prijava extends React.Component {
     super(props);
     this.state = {
       PrijavaEmail: '',
-      PrijavaPassword: ''
+      PrijavaLozinka: ''
     }
   }
 
-  onEmailChange = (event) => {
+  promenaEmaila = (event) => {
     this.setState({PrijavaEmail: event.target.value})
   }
 
-  onPasswordChange = (event) => {
-    this.setState({PrijavaPassword: event.target.value})
+  promenaLozinke = (event) => {
+    this.setState({PrijavaLozinka: event.target.value})
   }
 
-  onSubmitPrijava = () => {
-    fetch('http://localhost:3001/prijava', {
+  prijavi = () => {
+    fetch(this.props.urlServera+'/prijava', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
         email: this.state.PrijavaEmail,
-        lozinka: this.state.PrijavaPassword
+        lozinka: this.state.PrijavaLozinka
       })
     })
       .then(response => response.json())
@@ -57,7 +57,7 @@ class Prijava extends React.Component {
                   type="email"
                   name="email-address"
                   id="email-address"
-                  onChange={this.onEmailChange}
+                  onChange={this.promenaEmaila}
                 />
               </div>
               <div className="mv3">
@@ -67,13 +67,13 @@ class Prijava extends React.Component {
                   type="password"
                   name="password"
                   id="password"
-                  onChange={this.onPasswordChange}
+                  onChange={this.promenaLozinke}
                 />
               </div>
             </fieldset>
             <div className="">
               <input
-                onClick={this.onSubmitPrijava}
+                onClick={this.prijavi}
                 className="b ph3 pv2 input-reset ba  bg-transparent grow pointer f6 dib white"
                 type="submit"
                 value="Prijavi se"

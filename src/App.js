@@ -24,6 +24,8 @@ const pocetnoStanje = {
   }
 }
 
+const urlServera= 'https://diplomskirad932013-back.herokuapp.com';
+
 class App extends Component {
   constructor() {
     super();
@@ -66,7 +68,7 @@ class App extends Component {
   detektuj = () => {
     document.getElementById("inputimage").style.display='none';
     this.setState({urlSlike: this.state.unos, okvir: []});
-      fetch('http://localhost:3001/urlslike', {
+      fetch(urlServera+'/urlslike', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -80,7 +82,7 @@ class App extends Component {
             this.setState({okvir: 'invalid'});
           } else {
             document.getElementById("inputimage").style.display='block';
-            fetch('http://localhost:3001/slika', {
+            fetch(urlServera+'/slika', {
               method: 'put',
               headers: {'Content-Type': 'application/json'},
               body: JSON.stringify({
@@ -145,8 +147,8 @@ class App extends Component {
             </div>
           : (
              ruta === 'prijava'
-             ? <Prijava ucitajKorisnika={this.ucitajKorisnika} promenaRute={this.promenaRute}/>
-             : <Registracija ucitajKorisnika={this.ucitajKorisnika} promenaRute={this.promenaRute}/>
+             ? <Prijava urlServera={urlServera} ucitajKorisnika={this.ucitajKorisnika} promenaRute={this.promenaRute}/>
+             : <Registracija urlServera={urlServera} ucitajKorisnika={this.ucitajKorisnika} promenaRute={this.promenaRute}/>
             )
         }
       </div>
