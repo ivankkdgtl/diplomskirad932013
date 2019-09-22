@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BrUpita = ({ ime, brupita }) => {
+const Informacije = ({ ime, brupita }) => {
   ime=ime.charAt(0).toUpperCase() + ime.slice(1);
   var upit='';
   if ((brupita%10)===1) upit='upit';
@@ -17,4 +17,4 @@ const BrUpita = ({ ime, brupita }) => {
   );
 }
 
-export default BrUpita;
+export default Informacije;

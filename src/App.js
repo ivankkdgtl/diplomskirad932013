@@ -5,8 +5,9 @@ import Navigacija from './komponente/Navigacija/Navigacija';
 import Prijava from './komponente/Prijava/Prijava';
 import Registracija from './komponente/Registracija/Registracija';
 import UrlForma from './komponente/UrlForma/UrlForma';
-import BrUpita from './komponente/BrUpita/BrUpita';
+import Informacije from './komponente/Informacije/Informacije';
 import './App.css';
+import Informacije from './komponente/Informacije/Informacije';
 
 
 const pocetnoStanje = {
@@ -134,7 +135,7 @@ class App extends Component {
         <Navigacija ulogovan={ulogovan} promenaRute={this.promenaRute} />
         { ruta === 'pocetna'
           ? <div>
-              <BrUpita
+              <Informacije
                 ime={this.state.korisnik.ime}
                 brupita={this.state.korisnik.brupita}
               />
