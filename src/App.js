@@ -7,8 +7,6 @@ import Registracija from './komponente/Registracija/Registracija';
 import UrlForma from './komponente/UrlForma/UrlForma';
 import Informacije from './komponente/Informacije/Informacije';
 import './App.css';
-import Informacije from './komponente/Informacije/Informacije';
-
 
 const pocetnoStanje = {
   unos: '',
