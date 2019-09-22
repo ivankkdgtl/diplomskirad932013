@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Navigation = ({ promenaRute, ulogovan }) => {
+const Navigacija = ({ promenaRute, ulogovan }) => {
     if (ulogovan) {
       return (
         <nav style={{display: 'flex', justifyContent: 'flex-end'}}>
@@ -17,4 +17,4 @@ const Navigation = ({ promenaRute, ulogovan }) => {
     }
 }
 
-export default Navigation;
+export default Navigacija;
