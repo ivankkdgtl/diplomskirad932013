@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Particles2 from './components/Particles/Particles';
-import DetekcijaLica from './components/DetekcijaLica/DetekcijaLica';
-import Navigacija from './components/Navigacija/Navigacija';
-import Prijava from './components/Prijava/Prijava';
-import Registracija from './components/Registracija/Registracija';
-import UrlForma from './components/UrlForma/UrlForma';
-import BrUpita from './components/BrUpita/BrUpita';
+import Particles2 from './komponente/Particles/Particles';
+import DetekcijaLica from './komponente/DetekcijaLica/DetekcijaLica';
+import Navigacija from './komponente/Navigacija/Navigacija';
+import Prijava from './komponente/Prijava/Prijava';
+import Registracija from './komponente/Registracija/Registracija';
+import UrlForma from './komponente/UrlForma/UrlForma';
+import BrUpita from './komponente/BrUpita/BrUpita';
 import './App.css';
 
 
