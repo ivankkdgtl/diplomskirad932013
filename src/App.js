@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Particles2 from './komponente/Particles/Particles';
+import Particles from './komponente/Particles/Particles';
 import DetekcijaLica from './komponente/DetekcijaLica/DetekcijaLica';
 import Navigacija from './komponente/Navigacija/Navigacija';
 import Prijava from './komponente/Prijava/Prijava';
@@ -129,7 +129,7 @@ class App extends Component {
       <div className="App">
       <div style={{position: 'absolute', bottom: '10px', right: '10px'}}>Ivan Milunovic, 93/2013</div>
       <script src="https://cdn.rawgit.com/progers/pathseg/master/pathseg.js"></script>
-         <Particles2/>
+         <Particles/>
         <Navigacija ulogovan={ulogovan} promenaRute={this.promenaRute} />
         { ruta === 'pocetna'
           ? <div>

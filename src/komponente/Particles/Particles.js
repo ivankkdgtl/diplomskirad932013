@@ -2,7 +2,7 @@ import React from 'react';
 import Particles from 'react-particles-js';
 
 
-const Particles2 = React.memo(() => {
+const Particles = React.memo(() => {
     const particlesOptions = {
       "particles": {
         "number": {
@@ -122,4 +122,4 @@ const Particles2 = React.memo(() => {
   );
   });
   
-  export default Particles2;
+  export default Particles;
