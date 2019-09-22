@@ -22,7 +22,7 @@ class Register extends React.Component {
     this.setState({lozinka: event.target.value})
   }
 
-  prijavi = () => {
+  registruj = () => {
     fetch(this.props.urlServera+'/registracija', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
@@ -90,7 +90,7 @@ class Register extends React.Component {
             </fieldset>
             <div className="">
               <input
-                onClick={this.prijavi}
+                onClick={this.registruj}
                 className="b white ph3 pv2 input-reset ba b--white bg-transparent grow pointer f6 dib"
                 type="submit"
                 value="Registruj se"
